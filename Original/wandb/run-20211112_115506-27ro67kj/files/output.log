@@ -1,0 +1,35 @@
+Downloading http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz
+Downloading http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz to ./mnist_data/MNIST\raw\train-images-idx3-ubyte.gz
+80.8%
+Extracting ./mnist_data/MNIST\raw\train-images-idx3-ubyte.gz to ./mnist_data/MNIST\raw
+Downloading http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz
+Downloading http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz to ./mnist_data/MNIST\raw\train-labels-idx1-ubyte.gz
+Extracting ./mnist_data/MNIST\raw\train-labels-idx1-ubyte.gz to ./mnist_data/MNIST\raw
+Downloading http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz
+100.0%
+102.8%
+18.9%
+Extracting ./mnist_data/MNIST\raw\t10k-images-idx3-ubyte.gz to ./mnist_data/MNIST\raw
+Downloading http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz
+Downloading http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz to ./mnist_data/MNIST\raw\t10k-labels-idx1-ubyte.gz
+Extracting ./mnist_data/MNIST\raw\t10k-labels-idx1-ubyte.gz to ./mnist_data/MNIST\raw
+torch.Size([1, 28, 28])
+1 28 28
+13
+6
+100.0%
+112.7%
+Traceback (most recent call last):
+  File "C:\Users\ye200\AppData\Local\JetBrains\Toolbox\apps\PyCharm-E\ch-0\212.4746.137\plugins\python-ce\helpers\pydev\pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "C:\Users\ye200\AppData\Local\JetBrains\Toolbox\apps\PyCharm-E\ch-0\212.4746.137\plugins\python-ce\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "C:/Users/ye200/Aiffel/Torch-Master/Original/run_with_wandb.py", line 76, in <module>
+    train(epoch, cnn, ce_loss, train_loader, optimizer)
+  File "C:/Users/ye200/Aiffel/Torch-Master/Original/run_with_wandb.py", line 37, in train
+    y_pred = model(x)
+  File "C:\Users\ye200\Anaconda3\envs\env\lib\site-packages\torch\nn\modules\module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\Users\ye200\Aiffel\Torch-Master\Original\models\CNN.py", line 25, in forward
+    x = F.relu(self.bn1(self.conv1(x)))
+NameError: name 'F' is not defined

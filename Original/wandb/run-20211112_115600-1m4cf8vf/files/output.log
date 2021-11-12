@@ -1,0 +1,59 @@
+torch.Size([1, 28, 28])
+1 28 28
+13
+6
+2
+Train Epoch: 1 | Batch Status: 0/60000             (0% | Loss: 2.323779
+C:\Users\ye200\Aiffel\Torch-Master\Original\models\CNN.py:31: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  return F.log_softmax(x)
+Train Epoch: 1 | Batch Status: 6400/60000             (11% | Loss: 0.154968
+Train Epoch: 1 | Batch Status: 12800/60000             (21% | Loss: 0.062876
+Train Epoch: 1 | Batch Status: 19200/60000             (32% | Loss: 0.077550
+Train Epoch: 1 | Batch Status: 25600/60000             (43% | Loss: 0.098833
+Train Epoch: 1 | Batch Status: 32000/60000             (53% | Loss: 0.122105
+Train Epoch: 1 | Batch Status: 38400/60000             (64% | Loss: 0.051766
+Train Epoch: 1 | Batch Status: 44800/60000             (75% | Loss: 0.019850
+Train Epoch: 1 | Batch Status: 51200/60000             (85% | Loss: 0.209731
+Train Epoch: 1 | Batch Status: 57600/60000             (96% | Loss: 0.022711
+Train Epoch: 2 | Batch Status: 0/60000             (0% | Loss: 0.019893
+Train Epoch: 2 | Batch Status: 6400/60000             (11% | Loss: 0.010645
+Train Epoch: 2 | Batch Status: 12800/60000             (21% | Loss: 0.026850
+Train Epoch: 2 | Batch Status: 19200/60000             (32% | Loss: 0.025162
+Train Epoch: 2 | Batch Status: 25600/60000             (43% | Loss: 0.023487
+Train Epoch: 2 | Batch Status: 32000/60000             (53% | Loss: 0.057210
+Train Epoch: 2 | Batch Status: 38400/60000             (64% | Loss: 0.137264
+Train Epoch: 2 | Batch Status: 44800/60000             (75% | Loss: 0.007388
+Train Epoch: 2 | Batch Status: 51200/60000             (85% | Loss: 0.007164
+Train Epoch: 2 | Batch Status: 57600/60000             (96% | Loss: 0.157347
+Train Epoch: 3 | Batch Status: 0/60000             (0% | Loss: 0.015436
+Train Epoch: 3 | Batch Status: 6400/60000             (11% | Loss: 0.105386
+Train Epoch: 3 | Batch Status: 12800/60000             (21% | Loss: 0.026393
+Train Epoch: 3 | Batch Status: 19200/60000             (32% | Loss: 0.012873
+Train Epoch: 3 | Batch Status: 25600/60000             (43% | Loss: 0.016873
+Train Epoch: 3 | Batch Status: 32000/60000             (53% | Loss: 0.089139
+Train Epoch: 3 | Batch Status: 38400/60000             (64% | Loss: 0.029701
+Train Epoch: 3 | Batch Status: 44800/60000             (75% | Loss: 0.079322
+Train Epoch: 3 | Batch Status: 51200/60000             (85% | Loss: 0.016058
+Train Epoch: 3 | Batch Status: 57600/60000             (96% | Loss: 0.018956
+Train Epoch: 4 | Batch Status: 0/60000             (0% | Loss: 0.004300
+Train Epoch: 4 | Batch Status: 6400/60000             (11% | Loss: 0.007450
+Train Epoch: 4 | Batch Status: 12800/60000             (21% | Loss: 0.032575
+Train Epoch: 4 | Batch Status: 19200/60000             (32% | Loss: 0.001735
+Train Epoch: 4 | Batch Status: 25600/60000             (43% | Loss: 0.021102
+Train Epoch: 4 | Batch Status: 32000/60000             (53% | Loss: 0.027367
+Train Epoch: 4 | Batch Status: 38400/60000             (64% | Loss: 0.003986
+Train Epoch: 4 | Batch Status: 44800/60000             (75% | Loss: 0.022832
+Train Epoch: 4 | Batch Status: 51200/60000             (85% | Loss: 0.019733
+Train Epoch: 4 | Batch Status: 57600/60000             (96% | Loss: 0.102154
+Train Epoch: 5 | Batch Status: 0/60000             (0% | Loss: 0.002249
+Train Epoch: 5 | Batch Status: 6400/60000             (11% | Loss: 0.001338
+Train Epoch: 5 | Batch Status: 12800/60000             (21% | Loss: 0.013773
+Train Epoch: 5 | Batch Status: 19200/60000             (32% | Loss: 0.006450
+Train Epoch: 5 | Batch Status: 25600/60000             (43% | Loss: 0.001671
+Train Epoch: 5 | Batch Status: 32000/60000             (53% | Loss: 0.033192
+Train Epoch: 5 | Batch Status: 38400/60000             (64% | Loss: 0.001110
+Train Epoch: 5 | Batch Status: 44800/60000             (75% | Loss: 0.008862
+Train Epoch: 5 | Batch Status: 51200/60000             (85% | Loss: 0.001377
+Train Epoch: 5 | Batch Status: 57600/60000             (96% | Loss: 0.014888
+=======================
+ Test set: Average loss: 0.0005, Accuracy: 0.99
