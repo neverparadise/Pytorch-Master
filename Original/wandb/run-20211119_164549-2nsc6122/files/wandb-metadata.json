@@ -1,0 +1,22 @@
+{
+    "os": "Windows-10-10.0.19041-SP0",
+    "python": "3.7.11",
+    "heartbeatAt": "2021-11-19T07:45:52.909427",
+    "startedAt": "2021-11-19T07:45:49.264574",
+    "docker": null,
+    "cpu_count": 16,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "C:/Users/ye200/Aiffel/Torch-Master/Original/run_with_wandb.py",
+    "codePath": "Original\\run_with_wandb.py",
+    "git": {
+        "remote": "https://github.com/neverparadise/Pytorch-Master.git",
+        "commit": "3a5104f0812fa1ec902d10b4e74c170f0ffd9231"
+    },
+    "email": "ye20013@gmail.com",
+    "root": "C:/Users/ye200/Aiffel/Torch-Master",
+    "host": "DESKTOP-NBK5514",
+    "username": "ye200",
+    "executable": "C:\\Users\\ye200\\Anaconda3\\envs\\env\\python.exe"
+}

@@ -7,19 +7,47 @@ import argparse
 import yaml
 from models.CNN import CNN
 from dataset.MNIST_LOADER import make_loader
+from torch.utils.tensorboard import SummaryWriter
+
+parser = argparse.ArgumentParser(description='run cnn3')
+parser.add_argument('--config_path', type=str, default='./configs/', help='config_path')
+parser.add_argument('--save_path', type=str, default='./weights/', help='save_path')
+parser.add_argument('--model_name', type=str, default='cnn.pth', help='model_name')
+parser.add_argument('--pre_trained', type=str, default=False, help='pre_traiend')
+
+args = parser.parse_args()
+config_path = args.config_path
+save_path = args.save_path
+model_name = args.model_name
+pre_trained = args.pre_trained
+with open(config_path) as f:
+    config = yaml.load(f, Loader=yaml.FullLoader)
+    
+batch_size = config['batch_size']
+learning_rate = config['learning_rate']
+epochs = config['epochs']
+kernel_size = config['kernel_size']
+stride = config['stride']
+
+writer = SummaryWriter('runs/cnn/')
 
 def train(epoch, model, loss_func, train_loader, optimizer):
     model.train()
     for batch_index, (x, y) in enumerate(train_loader):
-        x, y = x.to(device), y.to(device)
         optimizer.zero_grad()
         y_pred = model(x)
         loss = loss_func(y_pred, y)
+        device = torch.device('cuda')
         loss.backward()
         optimizer.step()
+        writer.add_scalar("train/loss", loss, epoch*batch_size + batch_index)
+
         if batch_index % 100 == 0:
             print(f'Train Epoch: {epoch+1} | Batch Status: {batch_index*len(x)}/{len(train_loader.dataset)} \
             ({100. * batch_index * batch_size / len(train_loader.dataset):.0f}% | Loss: {loss.item():.6f}')
+    # if(epoch % 5 == 0):
+    torch.save(model.state_dict(), save_path + str(epoch) + model_name)
+
 
 def test(model, loss_func, test_loader):
     model.eval()
@@ -64,5 +92,5 @@ optimizer = optim.Adam(cnn.parameters(), lr=lr)
 
 for epoch in range(epochs):
     train(epoch, cnn, ce_loss, train_loader, optimizer)
-
+writer.close()
 test(cnn, ce_loss, test_loader)

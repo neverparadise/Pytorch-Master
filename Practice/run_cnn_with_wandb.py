@@ -1,16 +1,17 @@
+
 import wandb
 from subprocess import call
 import torch
 import torch.optim as optim
 import torch.nn as nn
 import numpy as np
-from dataset import MNSIT_LOADER
+from .dataset import MNSIT_LOADER
 from models.CNN import CNN
 import os
 
 #call(["wandb", "login", "발급받은 API 키 입력"])
 
-call(["wandb", "login", ''])
+call(["wandb", "login", 'ee5e9674b4963dbfa82038d10d0db1ad3891b16c'])
 
 
 device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
@@ -52,7 +53,6 @@ def validation(epoch, model, loss_func, valid_loader):
         x, y = x.to(device), y.to(device)
         y_pred = model(x)
         val_loss = loss_func(y_pred, y)
-        wandb.log({"val_loss": val_loss})
 
 def test(model, loss_func, test_loader):
     model.eval()

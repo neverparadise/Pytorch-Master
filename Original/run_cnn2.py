@@ -33,6 +33,7 @@ import numpy as np
 from torch.utils.data import DataLoader, Dataset
 from torchvision import datasets, transforms
 
+
 device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
 train_dataset = datasets.MNIST(root='./mnist_data/', train=True, download=True, transform=transforms.ToTensor())
 valid_dataset = datasets.MNIST(root='./mnist_data/', train=False, download=True, transform=transforms.ToTensor())
